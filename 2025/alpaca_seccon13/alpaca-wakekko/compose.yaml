@@ -1,0 +1,7 @@
+services:
+  challenge:
+    build: .
+    ports:
+      - ${PORT:-5555}:5000
+    privileged: true
+    restart: unless-stopped
